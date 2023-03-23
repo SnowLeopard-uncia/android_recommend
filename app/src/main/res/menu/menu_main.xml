@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/recommendFragment"
+        android:icon="@drawable/ic_round_home_20"
+        android:title="@string/recommend_fragment_title"
+        />
+    <item
+        android:id="@+id/classifyFragment"
+        android:title="@string/category_fragment_title"
+        android:icon="@drawable/ic_round_widgets_20"/>
+    <item
+        android:id="@+id/personalFragment"
+        android:title="@string/user_fragment_title"
+        android:icon="@drawable/ic_baseline_account_circle_20"
+        />
+
+
+</menu>

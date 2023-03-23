@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#0190F8</color>
+    <color name="purple_700">#0190F8</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_color_main">#F4F5F7</color>  <!--一直报错居然是因为这里多打了一个双引号，我搞了一个早上4个小时，饭都没吃，无语了，主要是编译器IDE没有报错，报错信息一直指向前面那些系统生成的颜色，哪里有问题真的看不出来，我还是最后打算换一个项目迁移过去然后复制颜色的时候才发现有个颜色贬义不通过-->
+    <color name="btn_blue">#0190F8</color>
+    <color name="detail_text_color">#242424</color>
+    <color name="unselect_color">#858A93</color>
+    <color name="select_blue">#1F85ED</color>
+</resources>

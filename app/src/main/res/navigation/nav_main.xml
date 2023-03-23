@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/recommendFragment">
+<!--通过startDestination来指明启动Activity时显示的第一个Fragment-->
+
+
+    <fragment
+        android:id="@+id/recommendFragment"
+        android:name="com.zyw.recommend_system.ui.main.recommend.RecommendFragment"
+        android:label="RecommendFragment" />
+    <fragment
+        android:id="@+id/classifyFragment"
+        android:name="com.zyw.recommend_system.ui.main.classify.ClassifyFragment"
+        android:label="ClassifyFragment" />
+    <fragment
+        android:id="@+id/personalFragment"
+        android:name="com.zyw.recommend_system.ui.main.PersonalFragment"
+        android:label="PersonalFragment" />
+</navigation>

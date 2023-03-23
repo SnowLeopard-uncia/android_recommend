@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="article"
+        type="com.zyw.recommend_system.logic.model.Article" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/nav_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:text="文章详情"
+            android:gravity="center"
+            android:textSize="18sp"
+
+            android:textColor="@color/detail_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/include">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_article_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/article_detail_marginHorizontal"
+                    android:layout_marginTop="15dp"
+                    android:textIsSelectable="true"
+                    android:textSize="23sp"
+                    android:text="@{article.title}"
+                    android:textColor="@color/detail_text_color"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="标题很长很长很长的标题" />
+
+                <TextView
+
+                    android:id="@+id/tv_article_public_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/article_detail_marginHorizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@{article.createTime}"
+                    android:textColor="#838383"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_article_title" />
+
+                <TextView
+                    android:id="@+id/tv_article_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/article_detail_marginHorizontal"
+                    android:textIsSelectable="true"
+                    android:text="@{article.author}"
+                    android:textColor="@color/btn_blue"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_article_public_time"
+                    tools:text="作者1；作者2" />
+
+                <TextView
+                    android:id="@+id/tv_article_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textIsSelectable="true"
+                    android:text="@{article.summary}"
+                    android:lineSpacingMultiplier="1.25"
+                    android:textColor="@color/detail_text_color"
+                    android:layout_marginHorizontal="@dimen/article_detail_marginHorizontal"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_article_author"
+
+                    tools:text="[目的]对基于知识图谱的推荐系统相关成果进行归纳梳理并展望总结。[文献范围]以“knowledge graph”、“KG”、“recommendation system”、“RS”、“recommended system”、“知识图谱”、“推荐系统”等关键词对web of science、中国知网、万方等文献数据库进行检索，经过阅`读整理并逐步增删，对其中的71篇文献进行研究总结。[方法]归纳总结基于知识图谱的推荐算法分类，对不同算法分类下的推荐系统发展历程进行梳理，介绍典型算法并对未来发展前景进行展望。[结果]基于知识图谱的推荐系统按照算法思想差异可以分为基于连接的推荐、基于嵌入的推荐和基于混合的推荐，三种算法思想在不同的使用场景各有优缺，如何充分利用图谱信息的同时减少算力消耗未来值得关注。[局限]由于渠道限制，未能得到一定数量该系统的商业落地实例进行剖析对比。[结论]基于知识图谱的推荐系统有效改善了传统推荐算法的效果，结合机器学习思想的推荐算法值得进一步探索，如何在有效范围内降低模型消耗也需要考虑。" />
+
+
+                <TextView
+                    android:id="@+id/tv_article_keyword"
+                    android:textColor="@color/detail_text_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/key_word(article.keyWord)}"
+                    android:textIsSelectable="true"
+                    android:layout_marginHorizontal="@dimen/article_detail_marginHorizontal"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_article_summary"
+                    android:textSize="17sp"
+                    tools:text="关键词：xx，xx" />
+
+
+                <TextView
+                    android:id="@+id/tv_article_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/article_detail_marginHorizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/detail_text_color"
+                    android:textSize="17sp"
+                    android:text="@{@string/article_link(article.link)}"
+                    android:textStyle="bold"
+                    android:autoLink="web"
+                    android:linksClickable="true"
+                    android:textColorLink="@color/btn_blue"
+                    android:textIsSelectable="true"
+                    app:layout_constraintTop_toBottomOf="@id/tv_article_keyword"
+                    tools:text="原文链接：\n" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#3BE6E6FF"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottomBar_height"
+            android:background="#FFFFFF"
+            android:paddingVertical="10dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_article_share"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_height"
+                    android:layout_height="@dimen/icon_height"
+                    android:layout_marginEnd="@dimen/article_detail_icon_margin"
+                    android:src="@drawable/ic_baseline_share_20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/detail_text_color"
+                    android:text="@string/share_text" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#E3E3E3" />
+
+            <LinearLayout
+                android:id="@+id/ll_article_collect"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/ll_article_like"
+                app:layout_constraintStart_toEndOf="@+id/ll_article_share">
+
+                <CheckBox
+                    android:id="@+id/cb_star"
+                    android:layout_width="@dimen/icon_height"
+                    android:layout_height="@dimen/icon_height"
+                    android:layout_marginEnd="@dimen/article_detail_icon_margin"
+                    android:button="@null"
+                    android:checked="@{article.stared}"
+                    android:background="@drawable/bg_cb_star"
+                    android:src="@drawable/ic_round_star_border_20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/detail_text_color"
+                    android:text="@string/collect_text" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#E3E3E3" />
+
+            <LinearLayout
+                android:id="@+id/ll_article_like"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <CheckBox
+                    android:id="@+id/cb_like"
+                    android:layout_width="@dimen/icon_height"
+                    android:layout_height="@dimen/icon_height"
+                    android:layout_marginEnd="@dimen/article_detail_icon_margin"
+                    android:button="@null"
+                    android:checked="@{article.liked}"
+                    android:background="@drawable/bg_cb_like"
+                    android:src="@drawable/ic_round_favorite_border_20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/detail_text_color"
+                    android:text="@string/favorite_text" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

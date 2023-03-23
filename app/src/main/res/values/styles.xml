@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Pop_Style_Theme" parent="Theme.AppCompat.Dialog">
+        <!--    边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--        是否悬浮在Activity上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--        半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--        无标题-->
+        <item name="windowNoTitle">true</item>
+        <!--        设置背景-->
+        <item name="android:windowBackground">@drawable/bg_pop_dialog</item>
+        <!--        模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--        遮罩层-->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+    <style name="pop_menu_anim_style">
+        <!--进入的动画-->
+        <item name="android:windowEnterAnimation">@anim/dialog_in_anim</item>
+        <!--退出的动画-->
+        <item name="android:windowExitAnimation">@anim/dialog_out_anim</item>
+    </style>
+
+    <style name="Loading_Style_Theme" parent="Theme.AppCompat.Dialog">
+        <!--    边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--        是否悬浮在Activity上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--        半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--        无标题-->
+        <item name="windowNoTitle">true</item>
+        <!--        设置背景-->
+        <item name="android:windowBackground">@color/bg_color_main</item>
+        <!--        模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--        遮罩层-->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+    <style name="fade_anim_style">
+        <!--进入的动画-->
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <!--退出的动画-->
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+</resources>

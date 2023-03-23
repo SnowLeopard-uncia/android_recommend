@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable-v24/bg_btn_login.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable-v24/bg_imput_view.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable-v24/bg_person_item.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/bg_btn.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/bg_btn_search.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/bg_cb_like.xml" value="0.142" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/bg_cb_star.xml" value="0.142" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/bg_imput_view.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/bg_person_item.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/bg_pop_dialog.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/bg_search.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/bg_skip_text.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_baseline_account_circle_20.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_baseline_favorite_20.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_baseline_favorite_border_20.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_baseline_search_20.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_baseline_share_20.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_baseline_star_border_20.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_round_android_20.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_round_favorite_20.xml" value="0.107" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_round_favorite_border_20.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_round_home_20.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_round_person_20.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_round_star_20.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_round_star_border_20.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_round_upgrade_20.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_round_view_list_20.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/ic_round_widgets_20.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/menu_item_selected.xml" value="0.1255" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/round_menu_book_10.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/round_menu_book_24.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/round_science_24.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/round_search_24.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/round_success_24.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/drawable/round_technology_24.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/activity_article_detail.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/activity_collection.xml" value="0.3333333333333333" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/activity_history.xml" value="0.22" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/activity_like.xml" value="0.16979166666666667" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/activity_lunch.xml" value="0.16979166666666667" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/activity_main.xml" value="0.18999073215940684" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/activity_real_name.xml" value="0.14130434782608695" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/activity_real_name2.xml" value="0.14130434782608695" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/activity_search.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/activity_upload.xml" value="0.22" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/dialog_loading.xml" value="0.16979166666666667" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/dialog_pop_layout.xml" value="0.13451086956521738" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/fragment_article_detail.xml" value="0.22" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/fragment_classify.xml" value="0.22" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/fragment_personal.xml" value="0.22" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/fragment_primary.xml" value="0.14130434782608695" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/fragment_real_name.xml" value="0.1" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/fragment_recommend.xml" value="0.14130434782608695" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/fragment_science.xml" value="0.16979166666666667" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/fragment_study.xml" value="0.14130434782608695" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/fragment_technology.xml" value="0.16979166666666667" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/fragment_upload_article.xml" value="0.22" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/item_recommend.xml" value="0.3333333333333333" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/nav_bar.xml" value="0.1" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/layout/spinner_item.xml" value="0.13931623931623932" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/menu/menu_main.xml" value="0.17447916666666666" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.108" />
+        <entry key="..\:/Android/Recommend_System/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.108" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

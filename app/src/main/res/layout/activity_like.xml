@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.mistakes.ComplexProblemActivity"
+        android:background="@color/bg_color_main">
+
+        <include
+            android:id="@+id/include5"
+            layout="@layout/nav_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="点赞记录"
+            android:textColor="@color/detail_text_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/include5"
+            app:layout_constraintEnd_toEndOf="@+id/include5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include5" />
+
+        <TextView
+            android:id="@+id/tv_no_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无文章"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_likes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

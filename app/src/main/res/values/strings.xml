@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">计算机科学技术文章推荐</string>
+    <string name="recommend_fragment_title">推荐</string>
+    <string name="category_fragment_title">分类</string>
+    <string name="user_fragment_title">用户</string>
+
+    <string name="favorite_text">喜欢</string>
+    <string name="collect_text">收藏</string>
+    <string name="share_text">分享</string>
+
+    <string name="launch_text">计算机科学技术文章\n推荐系统</string>
+
+    <string-array name="classifyArray">
+        <item>科学</item>
+        <item>技术</item>
+    </string-array>
+    <string name="first_hint_text">选择一个您感兴趣的分类\n将为您生成推荐</string>
+
+    <string name="key_word">关键词：\n%s</string>
+    <string name="article_link">原文链接：\n%s\n</string>
+    <string name="item_collect_count">%s 收藏</string>
+    <string name="item_view_count">%s 浏览</string>
+    <string name="item_like_count">%s 喜欢</string>
+
+</resources>
