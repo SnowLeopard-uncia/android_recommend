@@ -47,4 +47,10 @@
         <!--退出的动画-->
         <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
+    <style name="MyTabTextStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+<!--        <item name="android:textColor">@color/unselect_color</item>-->
+    </style>
+
 </resources>

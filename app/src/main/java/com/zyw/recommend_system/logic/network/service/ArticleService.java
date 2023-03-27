@@ -27,9 +27,6 @@ public interface ArticleService {
                                                          @Query("page") String page,
                                                          @Query("order") String order);
 
-    //个性化推荐（首页）
-
-
     //推荐论文 用于上传
 //    @FormUrlEncoded  //token
 //    @POST("/post/new")
@@ -47,6 +44,18 @@ public interface ArticleService {
     //查看文章 用于统计历史记录
     @GET("/article/{articleId}")
     Call<BaseResponse<Article>> getArticleDetail(@Path("articleId") String articleId);
+
+    //个性化推荐（首页）
+    @GET("/article/userRecommend")
+    Call<BaseResponse<ArticleList>> getRecommendArticleList(@Query("size") String size, @Query("page") String page);
+
+    //分类热门推荐
+    @GET("/article/hotRecommend")
+    Call<BaseResponse<ArticleList>> getHotRecommendArticleList(@Query("tag") String tag,@Query("size") String size, @Query("page") String page);
+
+    //首次推荐
+    @GET("/article/firstRecommend")
+    Call<BaseResponse<ArticleList>> getFirstRecommendArticleList(@Query("tag") String tag,@Query("size") String size, @Query("page") String page);
 
 
 }

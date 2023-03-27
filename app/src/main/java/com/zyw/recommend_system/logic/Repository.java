@@ -98,4 +98,12 @@ public class Repository {
     public void setRealName(Boolean realName){
         UserDao.setRealName(realName);
     }
+
+    public int getTag(){
+        return UserDao.getTag();
+    }
+
+    public void setTag(int tag){
+        UserDao.setTag(tag);
+    }
 }

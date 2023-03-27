@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.search.SearchActivity"
-
+        android:background="@color/bg_color_main"
         >
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,6 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/actionBar_height"
             android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/bg_imput_view"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
@@ -65,6 +67,15 @@
                     android:text="搜索" />
 
             </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#EAEAEA"
+                android:layout_marginHorizontal="3dp"
+                android:layout_marginVertical="7dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline16"

@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.paging.PagingData;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 
@@ -36,9 +37,17 @@ public class TechnologyFragment extends Fragment {
         fragmentTechnologyBinding=FragmentTechnologyBinding.inflate(inflater);
         mainViewModel=new ViewModelProvider(requireActivity()).get(MainViewModel.class);
         LinearLayoutManager linearLayoutManager =new LinearLayoutManager(this.getActivity());
-        fragmentTechnologyBinding.rvStudyMiddle.setLayoutManager(linearLayoutManager);
+
+        fragmentTechnologyBinding.rvHotTechnology.setLayoutManager(linearLayoutManager);
         ClassifyAdapter adapter = new ClassifyAdapter(new UserComparator());
-        fragmentTechnologyBinding.rvStudyMiddle.setAdapter(adapter);
+        fragmentTechnologyBinding.rvHotTechnology.setAdapter(adapter);
+
+//        mainViewModel.getHotArticlePaging("技术").observe(this.getActivity(), new Observer<PagingData<Article>>() {
+//            @Override
+//            public void onChanged(PagingData<Article> articlePagingData) {
+//                adapter.submitData(getViewLifecycleOwner().getLifecycle(),articlePagingData);
+//            }
+//        });
 
 
         return fragmentTechnologyBinding.getRoot();

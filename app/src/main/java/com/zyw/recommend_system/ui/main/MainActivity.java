@@ -66,8 +66,8 @@ public class MainActivity extends BaseActivity {
         dialog.findViewById(R.id.btn_choose_science).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-// TODO: 2023/3/20 请求科学的热门
-                mainViewModel.setFirst(false);
+                mainViewModel.setTag(0);
+//                mainViewModel.setFirst(false);
                 dialog.dismiss();
             }
         });
@@ -75,8 +75,8 @@ public class MainActivity extends BaseActivity {
         dialog.findViewById(R.id.btn_choose_technology).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO: 2023/3/20 请求技术的热门
-                mainViewModel.setFirst(false);
+                mainViewModel.setTag(1);
+//                mainViewModel.setFirst(false);
                 dialog.dismiss();
             }
         });

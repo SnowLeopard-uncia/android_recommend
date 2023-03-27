@@ -40,7 +40,7 @@ public class ScienceFragment extends Fragment {
         fragmentScienceBinding.rvClassifyScience.setAdapter(adapter);
 
 
-//        mainViewModel.getArticlePaging().observe(this.getActivity(), new Observer<PagingData<Article>>() {
+//        mainViewModel.getHotArticlePaging("科学").observe(this.getActivity(), new Observer<PagingData<Article>>() {
 //            @Override
 //            public void onChanged(PagingData<Article> articlePagingData) {
 //                adapter.submitData(getViewLifecycleOwner().getLifecycle(),articlePagingData);

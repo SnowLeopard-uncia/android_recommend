@@ -144,6 +144,7 @@ public class ArticleNetWork {
             public void onResponse(Call<BaseResponse<Integer>> call, Response<BaseResponse<Integer>> response) {
                 Integer code = response.body()!=null?response.body().getCode():null;
                 if (code==StatusCode.SUCCESS.code){
+                    Toast.makeText(MyApplication.getContext(),"收藏成功!",Toast.LENGTH_SHORT).show();
                     isCollect.postValue(true);
                 }else {
                     isCollect.postValue(false);
@@ -162,6 +163,7 @@ public class ArticleNetWork {
                 Integer code = response.body()!=null?response.body().getCode():null;
                 if (code==StatusCode.SUCCESS.code){
                     isCollectDelete.postValue(true);
+                    Toast.makeText(MyApplication.getContext(),"取消收藏",Toast.LENGTH_SHORT).show();
                 }else {
                     isCollectDelete.postValue(false);
                 }
@@ -175,6 +177,7 @@ public class ArticleNetWork {
             public void onResponse(Call<BaseResponse<Integer>> call, Response<BaseResponse<Integer>> response) {
                 Integer code = response.body()!=null?response.body().getCode():null;
                 if (code==StatusCode.SUCCESS.code){
+                    Toast.makeText(MyApplication.getContext(),"点赞成功!",Toast.LENGTH_SHORT).show();
                     isLike.postValue(true);
                 }else {
                     isLike.postValue(false);
@@ -192,6 +195,7 @@ public class ArticleNetWork {
                 Integer code = response.body()!=null?response.body().getCode():null;
                 if (code==StatusCode.SUCCESS.code){
                     isLikeDelete.postValue(true);
+                    Toast.makeText(MyApplication.getContext(),"取消喜欢",Toast.LENGTH_SHORT).show();
                 }else {
                     isLikeDelete.postValue(false);
                 }

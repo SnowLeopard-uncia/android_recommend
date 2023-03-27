@@ -18,7 +18,6 @@
             android:id="@+id/constraintLayout4"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -35,15 +34,19 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tb_study"
+            android:id="@+id/tb_classify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/bg_imput_view"
+            app:tabIndicatorColor="@color/btn_blue"
+            app:tabTextAppearance="@style/MyTabTextStyle"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicator="@drawable/indicator_full_tab_shape"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
-            app:tabIndicatorColor="@color/unselect_color"
-            app:tabSelectedTextColor="@color/select_blue"
-            app:tabTextColor="@color/unselect_color" />
+         />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/vp2_study"
@@ -52,7 +55,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tb_study" />
+            app:layout_constraintTop_toBottomOf="@+id/tb_classify" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

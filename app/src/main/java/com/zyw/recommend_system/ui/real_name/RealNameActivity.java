@@ -28,7 +28,7 @@ public class RealNameActivity extends BaseActivity {
         setContentView(R.layout.activity_real_name);
         activityRealNameBinding = DataBindingUtil.setContentView(this, R.layout.activity_real_name);
         realNameViewModel = new ViewModelProvider(this).get(RealNameViewModel.class);
-
+        initNavBar();
 
 
         activityRealNameBinding.btnRealName.setOnClickListener(new View.OnClickListener() {

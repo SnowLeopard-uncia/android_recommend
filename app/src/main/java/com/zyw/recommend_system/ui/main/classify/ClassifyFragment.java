@@ -53,14 +53,15 @@ public class ClassifyFragment extends Fragment {
         pagerAdapter.addFragment(new ScienceFragment());
         pagerAdapter.addFragment(new TechnologyFragment());
 
-        fragmentClassifyBinding.tbStudy.setTabTextColors(R.color.unselect_color,R.color.select_blue);
-        fragmentClassifyBinding.tbStudy.addTab(fragmentClassifyBinding.tbStudy.newTab().setText("科学"));
-        fragmentClassifyBinding.tbStudy.addTab(fragmentClassifyBinding.tbStudy.newTab().setText("技术"));
+//        fragmentClassifyBinding.tbClassify.setTabTextColors(R.color.unselect_color,R.color.select_blue);
+
+        fragmentClassifyBinding.tbClassify.addTab(fragmentClassifyBinding.tbClassify.newTab().setText("科学"));
+        fragmentClassifyBinding.tbClassify.addTab(fragmentClassifyBinding.tbClassify.newTab().setText("技术"));
 
 //fragment初始化的界面
         fragmentClassifyBinding.vp2Study.setCurrentItem(0);
 
-        fragmentClassifyBinding.tbStudy.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        fragmentClassifyBinding.tbClassify.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 fragmentClassifyBinding.vp2Study.setCurrentItem(tab.getPosition());
@@ -80,7 +81,7 @@ public class ClassifyFragment extends Fragment {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                fragmentClassifyBinding.tbStudy.setScrollPosition(position, 0, false);
+                fragmentClassifyBinding.tbClassify.setScrollPosition(position, 0, false);
             }
         });
 

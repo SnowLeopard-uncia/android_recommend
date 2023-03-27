@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:paddingVertical="7dp"
         android:paddingHorizontal="5dp"
-        app:labelVisibilityMode="auto"
+        app:labelVisibilityMode="selected"
         app:menu="@menu/menu_main"
         app:itemTextColor="@drawable/menu_item_selected"
         app:itemIconTint="@drawable/menu_item_selected"

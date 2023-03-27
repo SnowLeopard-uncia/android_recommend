@@ -19,7 +19,6 @@
             android:text="个性化推荐"
             android:gravity="center"
             android:textSize="18sp"
-
             android:textColor="@color/detail_text_color"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -67,8 +66,11 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_user_recommend"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
        android:layout_marginTop="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchView" />

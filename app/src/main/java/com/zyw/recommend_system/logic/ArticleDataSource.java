@@ -110,38 +110,38 @@ public class ArticleDataSource extends ListenableFuturePagingSource<Integer, Art
 //                LoadResult.Page.COUNT_UNDEFINED);
 //    }
 
-    @Nullable
-    @Override
-    public Integer getRefreshKey(@NonNull PagingState<Integer, Article> pagingState) {
-        // Try to find the page key of the closest page to anchorPosition, from
-        // either the prevKey or the nextKey, but you need to handle nullability
-        // here:
-        //  * prevKey == null -> 当前页面是第一页
-        //  * nextKey == null -> 当前页面是最后一页
-        //  * both prevKey and nextKey null -> anchorPage is the initial page, so
-        //    just return null.
-        Integer anchorPosition = pagingState.getAnchorPosition();
-        if (anchorPosition == null) {
-            return null;
-        }
-
-        LoadResult.Page<Integer, Article> anchorPage = pagingState.closestPageToPosition(anchorPosition);
-        if (anchorPage == null) {
-            return null;
-        }
-
-        Integer prevKey = anchorPage.getPrevKey();
-        if (prevKey != null) {
-            return prevKey + 1;
-        }
-
-        Integer nextKey = anchorPage.getNextKey();
-        if (nextKey != null) {
-            return nextKey - 1;
-        }
-
-        return null;
-    }
+//    @Nullable
+//    @Override
+//    public Integer getRefreshKey(@NonNull PagingState<Integer, Article> pagingState) {
+//        // Try to find the page key of the closest page to anchorPosition, from
+//        // either the prevKey or the nextKey, but you need to handle nullability
+//        // here:
+//        //  * prevKey == null -> 当前页面是第一页
+//        //  * nextKey == null -> 当前页面是最后一页
+//        //  * both prevKey and nextKey null -> anchorPage is the initial page, so
+//        //    just return null.
+//        Integer anchorPosition = pagingState.getAnchorPosition();
+//        if (anchorPosition == null) {
+//            return null;
+//        }
+//
+//        LoadResult.Page<Integer, Article> anchorPage = pagingState.closestPageToPosition(anchorPosition);
+//        if (anchorPage == null) {
+//            return null;
+//        }
+//
+//        Integer prevKey = anchorPage.getPrevKey();
+//        if (prevKey != null) {
+//            return prevKey + 1;
+//        }
+//
+//        Integer nextKey = anchorPage.getNextKey();
+//        if (nextKey != null) {
+//            return nextKey - 1;
+//        }
+//
+//        return null;
+//    }
 
 
 }

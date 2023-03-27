@@ -73,6 +73,21 @@ public class UserDao {
                 .putBoolean("RealName",true)
                 .apply();
     }
+
+    /**
+     * 设置第一次选择的tag
+     * @param tag 0是科学1是技术
+     */
+    public static void setTag(int tag){
+        sharePreference().edit()
+                .putInt("tag",tag)
+                .apply();
+    }
+
+    public static int getTag(){
+        return sharePreference().getInt("tag", 0);
+    }
+
    public static  SharedPreferences sharePreference(){
        return MyApplication.getContext().getSharedPreferences("user_info", Context.MODE_PRIVATE);
    }

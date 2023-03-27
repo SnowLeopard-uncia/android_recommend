@@ -49,7 +49,7 @@ public class LunchActivity extends AppCompatActivity {
         // 判断当前Activity是否isFinishing()，
         // 避免在finish，所有对象都为null的状态下执行CountDown造成内存泄漏
         if (!isFinishing()) {
-            timer = new CountDownTimer(1000 * 3, 1000) {
+            timer = new CountDownTimer(1000 * 4, 1000) {
                 @SuppressLint("SetTextI18n")
                 @Override
                 public void onTick(long millisUntilFinished) {

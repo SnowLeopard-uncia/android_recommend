@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@drawable/bg_pop_dialog"
+    >
+
+    <Button
+        android:id="@+id/btn_copy_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="复制标题"
+        android:background="@drawable/bg_btn_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_copy_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_btn_search"
+        android:text="复制摘要"
+        app:layout_constraintTop_toBottomOf="@+id/btn_copy_title"
+        tools:layout_editor_absoluteX="15dp" />
+
+    <Button
+        android:id="@+id/btn_copy_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_btn_search"
+        android:text="复制关键词"
+        app:layout_constraintTop_toBottomOf="@+id/btn_copy_summary"
+        tools:layout_editor_absoluteX="15dp" />
+
+    <Button
+        android:id="@+id/btn_copy_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_btn_search"
+        android:text="复制链接"
+        app:layout_constraintTop_toBottomOf="@+id/btn_copy_keyword"
+        tools:layout_editor_absoluteX="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+
+        android:text="复制后可前往其他App/浏览器粘贴内容"
+        app:layout_constraintTop_toBottomOf="@+id/btn_copy_link"
+     />
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="复制链接"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
