@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.zyw.recommend_system.logic.dao.UserDao;
 import com.zyw.recommend_system.logic.model.Article;
 import com.zyw.recommend_system.UserInfo;
+import com.zyw.recommend_system.logic.model.RealName;
 import com.zyw.recommend_system.logic.model.UserLogin;
 import com.zyw.recommend_system.logic.model.params.ArticlePost;
 import com.zyw.recommend_system.logic.network.ArticleNetWork;
@@ -34,7 +35,7 @@ public class Repository {
        return ArticleNetWork.userLogin(GUID);
     }
 
-    public LiveData<Boolean> postRealName(String name,String number){
+    public LiveData<RealName> postRealName(String name, String number){
         return ArticleNetWork.postRealName(name,number);
     }
 

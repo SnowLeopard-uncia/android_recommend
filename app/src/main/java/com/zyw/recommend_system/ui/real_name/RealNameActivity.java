@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.zyw.recommend_system.R;
 import com.zyw.recommend_system.databinding.ActivityRealNameBinding;
+import com.zyw.recommend_system.logic.model.RealName;
 import com.zyw.recommend_system.ui.BaseActivity;
 
 public class RealNameActivity extends BaseActivity {
@@ -28,7 +29,12 @@ public class RealNameActivity extends BaseActivity {
         setContentView(R.layout.activity_real_name);
         activityRealNameBinding = DataBindingUtil.setContentView(this, R.layout.activity_real_name);
         realNameViewModel = new ViewModelProvider(this).get(RealNameViewModel.class);
-        initNavBar();
+        activityRealNameBinding.ivFragmentBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
 
         activityRealNameBinding.btnRealName.setOnClickListener(new View.OnClickListener() {
@@ -41,13 +47,14 @@ public class RealNameActivity extends BaseActivity {
                 }else if (number.equals("")){
                     Toast.makeText(RealNameActivity.this,"身份证不能为空！",Toast.LENGTH_SHORT).show();
                 }else {
-                    realNameViewModel.postRealNameState(name,number).observe(RealNameActivity.this, new Observer<Boolean>() {
+                    realNameViewModel.postRealNameState(name,number).observe(RealNameActivity.this, new Observer<RealName>() {
                         @Override
-                        public void onChanged(Boolean aBoolean) {
-                            if (aBoolean){
+                        public void onChanged(RealName realName) {
+                            if (realName.getRole()==1){
                                 activityRealNameBinding.realNameArea.setVisibility(View.GONE);
                                 activityRealNameBinding.realNameSuccess.setVisibility(View.VISIBLE);
-                                realNameViewModel.setRealNameState(aBoolean);
+                                realNameViewModel.setRealNameState(true);
+                                realNameViewModel.setNewToken(realName.getToken());
                             }
 
                         }

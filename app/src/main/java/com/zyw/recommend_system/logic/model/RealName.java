@@ -5,13 +5,25 @@ public class RealName {
     private int role =0; //0表示没有实名，1表示实名
     private String name ="";
     private String  idNo="";
+    private String token="";
 
-    public RealName(int userId, int role, String name, String idNo) {
+    public RealName(int userId, int role, String name, String idNo, String token) {
         this.userId = userId;
         this.role = role;
         this.name = name;
         this.idNo = idNo;
+        this.token = token;
     }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+
 
     public int getUserId() {
         return userId;

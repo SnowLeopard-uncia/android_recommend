@@ -9,6 +9,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.paging.CombinedLoadStates;
+import androidx.paging.LoadState;
 import androidx.paging.PagingData;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -22,6 +24,9 @@ import com.zyw.recommend_system.ui.adapter.ClassifyAdapter;
 import com.zyw.recommend_system.ui.adapter.UserComparator;
 import com.zyw.recommend_system.ui.main.MainViewModel;
 import com.zyw.recommend_system.ui.search.SearchActivity;
+
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
 
 public class RecommendFragment extends Fragment {
 
@@ -68,7 +73,24 @@ public class RecommendFragment extends Fragment {
 //                adapter.submitData(getViewLifecycleOwner().getLifecycle(),articlePagingData);
 //            }
 //        });
+        /*
 
+        adapter.addLoadStateListener(new Function1<CombinedLoadStates, Unit>() {
+            @Override
+            public Unit invoke(CombinedLoadStates combinedLoadStates) {
+                switch (combinedLoadStates.getRefresh()){
+                    case LoadState.Loading:
+                        break;
+                    case LoadState.NotLoading:
+                        break;
+                    case LoadState.Error:
+                        break;
+                }
+                return null;
+            }
+        });
+
+         */
         return recommendBinding.getRoot();
     }
 

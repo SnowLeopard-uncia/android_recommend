@@ -8,7 +8,6 @@ import androidx.lifecycle.MutableLiveData;
 
 
 import com.zyw.recommend_system.MyApplication;
-import com.zyw.recommend_system.logic.dao.UserDao;
 import com.zyw.recommend_system.logic.model.Article;
 import com.zyw.recommend_system.logic.model.BaseResponse;
 import com.zyw.recommend_system.logic.model.RealName;
@@ -23,8 +22,6 @@ import com.zyw.recommend_system.logic.network.service.UserService;
 import com.zyw.recommend_system.utils.ApiException;
 import com.zyw.recommend_system.utils.RetrofitCallback;
 import com.zyw.recommend_system.utils.StatusCode;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -47,7 +44,7 @@ public class ArticleNetWork {
 
     static MutableLiveData<Boolean> isLikeDelete = new MutableLiveData<>();
 
-    static MutableLiveData<Boolean> postRealNameState = new MutableLiveData<>();
+    static MutableLiveData<RealName> postRealNameLiveData = new MutableLiveData<>();
 
     static MutableLiveData<Boolean> realNameState = new MutableLiveData<>();
 
@@ -68,7 +65,7 @@ public class ArticleNetWork {
         return loginData;
     }
 
-    public static LiveData<Boolean> postRealName(String name,String number){
+    public static LiveData<RealName> postRealName(String name,String number){
         PostRealName postRealName = new PostRealName(name,number);
         userService.userRealName(postRealName).enqueue(new Callback<BaseResponse<RealName>>() {
             @Override
@@ -78,8 +75,8 @@ public class ArticleNetWork {
                 int state = response.body().getCode();
                 String message = response.body().getMsg();
                 if (state == StatusCode.SUCCESS.code){
-                    postRealNameState.postValue(true);
-                }else if (state == StatusCode.ERROR.code){
+                    postRealNameLiveData.postValue(response.body().getData());
+                }else  {
                     Toast.makeText(MyApplication.getContext(),message,Toast.LENGTH_SHORT).show();
                 }
             }
@@ -97,7 +94,7 @@ public class ArticleNetWork {
                 }
             }
         });
-        return postRealNameState;
+        return postRealNameLiveData;
     }
 
     public static LiveData<Boolean> getUserRealName(){

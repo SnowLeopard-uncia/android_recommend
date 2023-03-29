@@ -21,6 +21,7 @@ public class Article implements Serializable, Parcelable {
     private String keyWord;
     private String link;
     private int views;
+    @SerializedName("likes")
     private int like;
     private int stars;
     @SerializedName("pubTime")
